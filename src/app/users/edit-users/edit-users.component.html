@@ -1,0 +1,19 @@
+<h2>Editer un User {{user? user.name : ''}}</h2>
+
+<form [formGroup]="editForm" (ngSubmit)="editUser()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nom *</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label for="auteur" class="form-label">
+            Email *
+        </label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Valider</button>
+</form>

@@ -1,0 +1,27 @@
+<h2>Ajouter un livre</h2>
+
+<!--Template driven forms-->
+
+<form #f="ngForm" (ngSubmit)="addUser(f)">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Nom *</label>
+        <input type="text" class="form-control" id="name" name="name" #name ngModel required #nom="ngModel">
+        <div *ngIf="nom.invalid && nom.touched" class="error">
+            Le champ nom est obligatoire!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="auteur" class="form-label">
+            email *
+        </label>
+        <input type="email" class="form-control" id="email" name="email" #email ngModel required #mail="ngModel">
+        <div *ngIf="mail.invalid && mail.touched" class="error">
+            Le champ email est obligatoire!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" #password ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Valider</button>
+</form>
