@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/authGard/service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'books';
+
+  constructor(private authService:AuthService){
+
+  }
+
+  logout():void{
+    console.log("aaaa")
+    this.authService.logout()
+  }
 }

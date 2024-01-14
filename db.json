@@ -17,6 +17,12 @@
       "title": "Power of now",
       "author": "Charles Duhigg",
       "price": 25
+    },
+    {
+      "title": "aaa",
+      "author": "aaaaaa",
+      "price": "12",
+      "id": 5
     }
   ],
   "users": [
